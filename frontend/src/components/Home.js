@@ -79,7 +79,7 @@ const Home = () => {
 
   useEffect(() => {
    // axios.get('http://localhost:5000/api/data')
-   axios.get('https://cs-837-visualization-4.onrender.com')
+   axios.get('https://cs-837-visualization-4.onrender.com/api/data')
       .then(response => {
         setData(response.data);
         setYearRange({ min: 1800, max: 2022 });
@@ -434,13 +434,3 @@ const Home = () => {
 
 export default Home;
 
-
-// <div style={{
-//   backgroundColor: '#e8e8e8',
-//   padding: '30px',
-//   borderRadius: '5px',
-//   maxWidth: '500px',
-//   width: '80%',
-//   boxShadow: '0 4px 10px rgba(0,0,0,0.2)',
-//   position: 'relative'
-// }}>
