@@ -33,11 +33,12 @@ const app = express();
 const PORT = process.env.PORT || 5000;
 
 // Middleware
-app.use(cors({
-    origin: 'https://cs-837-visualization.vercel.app',
-    methods: ['GET', 'POST'],
-    credentials: true
-  }));
+// app.use(cors({
+//     origin: 'https://cs-837-visualization.vercel.app',
+//     methods: ['GET', 'POST'],
+//     credentials: true
+//   }));
+app.use(cors());
 app.use(express.json());
 
 // Routes
@@ -52,12 +53,6 @@ mongoose.connect(process.env.MONGO_URI, {
 .then(() => console.log('✅ MongoDB Connected'))
 .catch(err => console.error('❌ MongoDB Error:', err));
 
-
-
-// Replace this:
-app.use(cors());
-
-// With this:
 
 
 
