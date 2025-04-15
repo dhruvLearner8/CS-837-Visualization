@@ -56,6 +56,7 @@ mongoose.connect(process.env.MONGO_URI, {
 
 
 
+
 // Default route
 app.get('/', (req, res) => {
   res.send('🚀 Backend API is running...');

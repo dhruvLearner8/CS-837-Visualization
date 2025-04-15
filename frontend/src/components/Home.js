@@ -33,6 +33,8 @@ const Home = () => {
   const [hoverPos, setHoverPos] = useState({ x: 0, y: 0 });
   const [zoomExtent, setZoomExtent] = useState(null);
   const [showAbout, setShowAbout] = useState(false);
+  const [hasZoomed, setHasZoomed] = useState(false);
+
 
 
   // Expanded trend map with all 3 metrics
@@ -240,6 +242,8 @@ const Home = () => {
             setHoverPos={setHoverPos}
             zoomExtent={zoomExtent}              // 👈 Pass zoom extent
             setZoomExtent={setZoomExtent} 
+            hasZoomed={hasZoomed}
+  setHasZoomed={setHasZoomed}
           />
 
        

@@ -16,7 +16,7 @@ const MultiTrendCharts = ({ selectedCountries, trendMap, regionColorMap }) => {
 
   // Shared X Scale
   const xScale = d3.scaleLinear()
-    .domain([1850, 2022])
+    .domain([1950, 2022])
     .range([margin.left, chartWidth - margin.right]);
 
   return (

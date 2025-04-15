@@ -199,7 +199,9 @@ const ScatterPlot = ({
   setHoveredCountry,
   setHoverPos,
   zoomExtent,
-  setZoomExtent
+  setZoomExtent,
+  hasZoomed={hasZoomed},
+  setHasZoomed={setHasZoomed}
 }) => {
   const svgRef = useRef();
 
@@ -408,6 +410,7 @@ const ScatterPlot = ({
         .extent([[0, 0], [innerWidth, innerHeight]])
         .on("end", ({ selection }) => {
           if (selection) {
+            
             setZoomExtent(selection);
           }
         });
