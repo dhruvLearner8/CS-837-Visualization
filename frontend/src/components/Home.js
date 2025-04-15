@@ -80,8 +80,8 @@ const Home = () => {
   };
 
   useEffect(() => {
-    axios.get('http://localhost:5000/api/data')
-   //axios.get('https://cs-837-visualization-4.onrender.com/api/data')
+   // axios.get('http://localhost:5000/api/data')
+   axios.get('https://cs-837-visualization.onrender.com/api/data')
       .then(response => {
         setData(response.data);
         setYearRange({ min: 1800, max: 2022 });
